@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://chesterblog.cn/"/>
-  <updated>2018-10-25T14:25:09.799Z</updated>
+  <updated>2018-11-16T07:31:05.758Z</updated>
   <id>https://chesterblog.cn/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>hhh</title>
-    <link href="https://chesterblog.cn/j/"/>
-    <id>https://chesterblog.cn/j/</id>
-    <published>2018-10-25T14:11:40.653Z</published>
-    <updated>2018-10-25T14:25:09.799Z</updated>
+    <title>主题搭建说明</title>
+    <link href="https://chesterblog.cn/explain/"/>
+    <id>https://chesterblog.cn/explain/</id>
+    <published>2018-11-16T07:29:07.399Z</published>
+    <updated>2018-11-16T07:31:05.758Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,33 @@
       
         
         
-          &lt;h3 id=&quot;Jerry&quot;&gt;&lt;a href=&quot;#Jerry&quot; class=&quot;headerlink&quot;
+          &lt;h1 id=&quot;hexo-theme-matery&quot;&gt;&lt;a href=&quot;#hexo-theme-matery&quot; class=&quot;headerlink&quot; title=&quot;hexo-theme-matery&quot;&gt;&lt;/a&gt;hexo-theme-matery&lt;/h1&gt;&lt;p&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="java" scheme="https://chesterblog.cn/tags/java/"/>
+    
+      <category term="test" scheme="https://chesterblog.cn/tags/test/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hhh</title>
+    <link href="https://chesterblog.cn/j/"/>
+    <id>https://chesterblog.cn/j/</id>
+    <published>2018-10-25T14:11:40.653Z</published>
+    <updated>2018-11-16T07:24:56.930Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;hexo-theme-matery&quot;&gt;&lt;a href=&quot;#hexo-theme-matery&quot; class=&quot;headerlink&quot; title=&quot;hexo-theme-matery&quot;&gt;&lt;/a&gt;hexo-theme-matery&lt;/h1&gt;&lt;p&gt;&lt;a
         
       
     
