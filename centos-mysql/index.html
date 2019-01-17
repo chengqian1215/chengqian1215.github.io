@@ -5,8 +5,11 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello, 陪着行云流浪">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="Centos安装mysql, 陪着行云流浪">
+    <meta name="description" content="从网上下载mysql的repo源：
+wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm 
+
+从网上下载这个rpm包（这里wget 命令是从网络上下载文件的命">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +17,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Hello | 陪着行云流浪</title>
+    <title>Centos安装mysql | 陪着行云流浪</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -249,13 +252,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Hello
+                        Centos安装mysql
                     </div>
                 </div>
             </div>
@@ -275,49 +278,53 @@
             
             <div class="article-tag">
                 
-                <a href="/tags/java/" target="_blank">
-                    <span class="chip bg-color">java</span>
+                <a href="/tags/Linux/" target="_blank">
+                    <span class="chip bg-color">Linux</span>
                 </a>
                 
-                <a href="/tags/标签2/" target="_blank">
-                    <span class="chip bg-color">标签2</span>
+                <a href="/tags/mysql/" target="_blank">
+                    <span class="chip bg-color">mysql</span>
                 </a>
                 
             </div>
             
             <div class="post-info">
                 
-                <span class="post-cate">
-                    <i class="fa fa-bookmark fa-fw icon-category"></i>
-                    
-                    <a href="/categories/Hexo教程/" class="post-category" target="_blank">
-                        Hexo教程
-                    </a>
-                    
-                </span>
-                
 
                 <span class="post-date">
-                    <i class="fa fa-clock-o fa-fw"></i>2016-06-01
+                    <i class="fa fa-clock-o fa-fw"></i>2018-10-25
                 </span>
             </div>
         </div>
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start1111"><a href="#Quick-Start1111" class="headerlink" title="Quick Start1111"></a>Quick Start1111</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span>
+                <p>从网上下载mysql的repo源：</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">wget</span> http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm 
 </code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server
+<p>从网上下载这个rpm包（这里wget 命令是从网络上下载文件的命令一般的格式为wget +url），下载好rpm包后安装这个包：</p>
+<pre class=" language-bash"><code class="language-bash"> rpm -ivh mysql-community-release-el7-5.noarch.rpm
 </code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate
+<p>安装好这个rpm包后，开始安装mysql-server ：</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">sudo</span> yum <span class="token function">install</span> mysql-server
 </code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy
+<p>之后就是网络下载安装了，在中间会出现两个需要选择的地方都填“y”回车就行，然后就会显示安装成功</p>
+<p>然后我们来测试是否安装成功，这时如果直接像windows下一样输入mysql -uroot -p可能会出现一些错误（ERROR 2002 (HY000): Can‘t connect to local MySQL server through socket ‘/var/lib/mysql/mysql.sock‘ (2)）原因是mysql这个文件的权限问题，需要把这个文件的权限改为当前用户</p>
+<pre class=" language-bash"><code class="language-bash"> <span class="token function">sudo</span> <span class="token function">chown</span> -R openscanner:openscanner /var/lib/mysql
 </code></pre>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<p>然后就重启服务重新直接登录root用户　</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">service</span> mysqld restart
+mysql -u root　
+</code></pre>
+<p>这样就会进入到mysql服务，也就是我们常用的mysql命令行，这时就要来修改root用户的密码了</p>
+<pre class=" language-bash"><code class="language-bash">use mysql<span class="token punctuation">;</span>
+update user <span class="token keyword">set</span> password<span class="token operator">=</span>password<span class="token punctuation">(</span><span class="token string">'new password'</span><span class="token punctuation">)</span> where user<span class="token operator">=</span><span class="token string">'root'</span><span class="token punctuation">;</span>
+flush privileges<span class="token punctuation">;</span>
+</code></pre>
+<p>这里的第一句是选用需要修改的数据库，在mysql中用户名密码都在数据库名为mysql的这个库中，在修改数据库中的数据表前都需要使用use命令选中使用哪个数据库，第二句是更新数据表user中root用户的密码为新密码，第三句是将前面所做的修改在系统中刷新生效。</p>
+<p>然后就可以使用exit命令退出然后重新使用mysql -uroot -p 回车然后输入新密码进入mysql了。</p>
+<hr>
+<p>摘自博客园：霁源童</p>
 
             </div>
             <hr>
@@ -456,7 +463,7 @@
                     <span class="reprint-tip">Reprint please specify: </span>
                     <a href="https://chesterblog.cn" class="b-link-green">陪着行云流浪</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/hello-world/" class="b-link-green">Hello</a>
+                    <a href="/centos-mysql/" class="b-link-green">Centos安装mysql</a>
                 </p>
             </div>
         </div>
@@ -478,7 +485,7 @@
         repo: '',
         owner: '',
         admin: null,
-        id: '2016-06-01T23-47-44',
+        id: '2018-10-25T22-11-40',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -498,23 +505,27 @@
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">Previous</div>
             <div class="card">
-                <a href="/centos-mysql/">
+                <a href="/explain/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Centos安装mysql">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="主题搭建说明">
                         
-                        <span class="card-title">Centos安装mysql</span>
+                        <span class="card-title">主题搭建说明</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">从网上下载mysql的repo源：
-wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm 
+                    <div class="summary">hexo-theme-matery      
+English Document | 演示示例
 
-从网上下载这个rpm包（这里wget 命令是从网络上下载文件的命</div>
+这是一个采用Material Design和响应式设计的 Hexo 博客主题。
+
+特性
+简单漂亮，文章内容美观易读
+Material Desi</div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-10-25
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-11-16
                         </span>
                         <span class="publish-author">
                             
@@ -527,12 +538,12 @@ wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Linux/" target="_blank">
-                        <span class="chip bg-color">Linux</span>
+                    <a href="/tags/java/" target="_blank">
+                        <span class="chip bg-color">java</span>
                     </a>
                     
-                    <a href="/tags/mysql/" target="_blank">
-                        <span class="chip bg-color">mysql</span>
+                    <a href="/tags/test/" target="_blank">
+                        <span class="chip bg-color">test</span>
                     </a>
                     
                 </div>
@@ -544,7 +555,7 @@ wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">Next</div>
             <div class="card">
-                <a href="/test/">
+                <a href="/hello-world/">
                     <div class="card-image">
                         
                         

@@ -43,11 +43,11 @@
   </entry>
   
   <entry>
-    <title>hhh</title>
-    <link href="https://chesterblog.cn/j/"/>
-    <id>https://chesterblog.cn/j/</id>
+    <title>Centos安装mysql</title>
+    <link href="https://chesterblog.cn/centos-mysql/"/>
+    <id>https://chesterblog.cn/centos-mysql/</id>
     <published>2018-10-25T14:11:40.653Z</published>
-    <updated>2018-11-16T07:24:56.930Z</updated>
+    <updated>2019-01-17T06:15:13.894Z</updated>
     
     <summary type="html">
     
@@ -55,16 +55,17 @@
       
         
         
-          &lt;h1 id=&quot;hexo-theme-matery&quot;&gt;&lt;a href=&quot;#hexo-theme-matery&quot; class=&quot;headerlink&quot; title=&quot;hexo-theme-matery&quot;&gt;&lt;/a&gt;hexo-theme-matery&lt;/h1&gt;&lt;p&gt;&lt;a
+          &lt;p&gt;从网上下载mysql的repo源：&lt;/p&gt;
+&lt;pre class=&quot; language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;wget&lt;/span&gt;
         
       
     
     </summary>
     
     
-      <category term="java" scheme="https://chesterblog.cn/tags/java/"/>
+      <category term="Linux" scheme="https://chesterblog.cn/tags/Linux/"/>
     
-      <category term="test" scheme="https://chesterblog.cn/tags/test/"/>
+      <category term="mysql" scheme="https://chesterblog.cn/tags/mysql/"/>
     
   </entry>
   
